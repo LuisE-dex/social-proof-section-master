@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+:root{
+
+    /* ### Primary */
+    --veryDarkMagenta: hsl(300, 43%, 22%);
+    --softPink: hsl(333, 80%, 67%);
+
+    /* ### Neutral */
+    --darkGrayishMagenta: hsl(303, 10%, 53%);
+    --lightGrayishMagenta: hsl(300, 24%, 85%);
+    --White: hsl(0, 0%, 100%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "League Spartan", sans-serif;
+    background: url(bg-pattern-top-mobile.svg) , url(bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/*----------------Header----------------*/
+header{
+    height: 300px;
+    text-align: center;
+}
+header h1{
+    font-weight: 700;
+    font-size: 32px;
+    margin: 80px 68px 20px;
+    line-height: 30px;
+    color: var(--veryDarkMagenta);
+}
+header p{
+    margin: 0 25px 0;
+    font-size: 15px;
+    line-height: 24px;
+    color: var(--darkGrayishMagenta);
+    font-weight: 700;
+}
+
+/*--------------stars-container------------*/
+.stars-container{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.stars{
+    width: 325px;
+    height: 75px;
+    background-color: var(--lightGrayishMagenta);
+    border-radius: 15px;
+    text-align: center;
+    padding-top: 15px;
+    line-height: 25px;
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--veryDarkMagenta);
+}
+
+/*---------------cards-container-----------*/
+.cards-container{
+    height: 810px;
+    padding: 30px 0 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.cards{
+    width: 325px;
+    height: 230px;
+    padding: 30px;
+    border-radius: 18px;
+    background-color: var(--veryDarkMagenta);
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+}
+.cards img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    margin-right: 20px;
+}
+.cards h4{
+    color: var(--White);
+    font-weight: 700;
+    font-size: 17px;
+    grid-column: 2/3;
+}
+.cards h5{
+    color: var(--softPink);
+    font-weight: 700;
+    font-size: 15px;
+    grid-column: 2/3;
+    position: relative;
+    bottom: 12px;
+}
+.cards p{
+    color: var(--White);
+    font-weight: 700;
+    font-size: 16px;
+    grid-row: 3/4;
+    grid-column: 1/3;
+    text-align: left;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+/*---------MQ--------*/
+@media screen and (min-width: 376px) {
+    body{
+        background: url(bg-pattern-top-desktop.svg) , url(bg-pattern-bottom-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: top left , right bottom;
+    }
+    .stars-container{
+        padding: 0 22px 15px;
+    }
+    .star1{
+        align-self: flex-start;
+    }
+    .star2{
+        align-self: center;
+    }
+    .star3{
+        align-self: flex-end;
+    }
+    
+    .cards-container{
+        padding: 15px 22px;
+
+    }
+    .colton{
+        align-self: flex-start;
+    }
+    .irene{
+        align-self: center;
+    }
+    .anne{
+        align-self: flex-end;
+    }   
+}
+
+@media screen and (min-width: 800px) {
+    .stars{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 25px 35px;
+        width: 442px;
+        font-size: 19px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    body{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    header {
+        text-align: left;
+    }
+    header h1{
+        margin: 30px 200px 10px 50px;
+        font-size: 2.8rem;
+        line-height: 50px;
+    }
+    header p{
+        margin-left: 50px;
+        font-size: 1.2rem;
+    }
+    .stars-container{
+        padding: 15px;
+    }
+    .stars{
+        background-color: hsla(300, 25%, 90%, 0.493);;
+    }
+    .cards-container{
+        height: 350px;
+        flex-wrap: wrap;
+        flex-direction: row;
+        grid-column: 1/3;
+        padding: 30px 50px 50px 50px;
+    }
+    .cards{
+        width: 370px;
+    }
+
+}
+
+
